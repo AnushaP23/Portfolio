@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anusha P Hullathi — AI & ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="spb"></div>
+  <div id="toast">Copied to clipboard</div>
+
+  <div id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M5 15l7-7 7 7" />
+    </svg>
+  </div>
+
+  <!-- Hover image for projects -->
+  <div id="proj-hover-img" class="proj-hover-img">
+    <div class="proj-hover-inner" id="proj-hover-content"></div>
+  </div>
+
+  <!-- ── Nav ── -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero">Anusha P Hullathi</a>
+    <div class="nav-links">
+      <a href="#about" data-s="about">About</a>
+      <a href="#experience" data-s="experience">Experience</a>
+      <a href="#projects" data-s="projects">Projects</a>
+      <a href="#skills" data-s="skills">Skills</a>
+      <a href="#contact" data-s="contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-mid" aria-hidden="true"></div>
+    <div class="hero-code" aria-hidden="true">
+      <div class="hc-line" style="--d:.6s">
+        <span class="hc-p">›</span><span class="hc-t"><span class="hc-k">import</span> torch, langchain,
+          transformers</span>
+      </div>
+      <div class="hc-line" style="--d:1.3s">
+        <span class="hc-p">›</span><span class="hc-t">device = torch.device(<span class="hc-s">"cuda"</span>) <span
+            class="hc-c"># GPU ready</span></span>
+      </div>
+      <div class="hc-line" style="--d:2.0s">
+        <span class="hc-p">›</span><span class="hc-t">model = <span class="hc-k">AutoModel</span>.from_pretrained(<span
+            class="hc-s">"bert-base"</span>)</span>
+      </div>
+      <div class="hc-line" style="--d:2.7s">
+        <span class="hc-p">›</span><span class="hc-t">chain = <span class="hc-k">LLMChain</span>(llm=model,
+          prompt=template)</span>
+      </div>
+      <div class="hc-line" style="--d:3.4s">
+        <span class="hc-p">›</span><span class="hc-t">pipeline.run(query) <span class="hc-c"># RAG · 98ms</span></span>
+      </div>
+      <div class="hc-line" style="--d:4.1s">
+        <span class="hc-p">›</span><span class="hc-t">mlflow.log_metrics({<span class="hc-s">"acc"</span>: 0.973, <span
+            class="hc-s">"loss"</span>: 0.041})</span>
+      </div>
+      <div class="hc-line" style="--d:4.8s">
+        <span class="hc-p hc-ok">✓</span><span class="hc-t hc-ok">acc: 0.973 · loss: 0.041 · deployed</span>
+      </div>
+    </div>
+    <div class="hero-mid" aria-hidden="true"></div>
+    <div class="hero-image-wrap">
+      <img src="Pfp Coffee.jpeg" alt="Anusha P Hullathi" class="hero-img" />
+    </div>
+    <div class="hero-scroll">Scroll down</div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Available for opportunities · Bengaluru, India</div>
+        <h1 class="hero-name">
+          Anusha<br><em>P Hullathi</em>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-role">
+            <span class="typed-wrap" id="typed-text"></span><span class="cursor-blink"></span>
+            <br>
+            <span style="font-size:.85rem; display:block; margin-top:6px;">Building at the intersection of data,
+              language &amp; real-world impact.</span>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">2</div>
+              <div class="hero-stat-label">Companies</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">9+</div>
+              <div class="hero-stat-label">Projects</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">7</div>
+              <div class="hero-stat-label">Certificates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="section-label reveal"><span class="section-num">01</span> About</div>
+    <div class="about-layout">
+      <div class="reveal">
+        <h2 class="about-heading">Crafting<br>intelligent<br><em>systems</em></h2>
+        <div class="about-quick">
+          <div class="about-quick-item">
+            <span class="aqi-label">Education</span>
+            <div>
+              <div class="aqi-value">B.E. Computer Science</div>
+              <div class="aqi-sub">Reva University · 2021–2025</div>
+            </div>
+          </div>
+          <div class="about-quick-item">
+            <span class="aqi-label">Role</span>
+            <div>
+              <div class="aqi-value">RPA Developer · IBM</div>
+              <div class="aqi-sub">Nov 2025 – Present</div>
+            </div>
+          </div>
+          <div class="about-quick-item">
+            <span class="aqi-label">Location</span>
+            <div>
+              <div class="aqi-value">Bengaluru, Karnataka</div>
+              <div class="aqi-sub">India</div>
+            </div>
+          </div>
+          <div class="about-quick-item">
+            <span class="aqi-label">Focus</span>
+            <div>
+              <div class="aqi-value">ML · GenAI · NLP · RPA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="about-bio">
+          <p>
+            CSE graduate from <strong>Reva University</strong> with a deep focus on Machine Learning
+            and Generative AI. I enjoy building systems that turn complex data into something useful —
+            from LLM-powered financial analysis tools to deep learning classifiers that work on
+            real medical imaging data.
+          </p>
+          <p>
+            Currently working as an <strong>RPA Developer at IBM</strong>, I bring a cross-disciplinary
+            perspective that blends intelligent automation, AI engineering, and thoughtful software design.
+            I care about work that's practical, well-engineered, and grounded in real problems.
+          </p>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Generative AI</span>
+          <span class="chip">NLP</span>
+          <span class="chip">Deep Learning</span>
+          <span class="chip">LLMs</span>
+          <span class="chip">RPA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section">
+    <div class="section-label reveal"><span class="section-num">02</span> Experience</div>
+    <div class="exp-list">
+
+      <div class="exp-item reveal">
+        <div class="exp-period">
+          Nov 2025 – Present
+          <br><span class="badge badge-current">Current</span>
+        </div>
+        <div class="exp-main">
+          <div class="exp-company">IBM</div>
+          <div class="exp-role">RPA Developer</div>
+          <ul class="exp-bullets">
+            <li>Joined the <strong>Squat Delivery Team</strong> as an RPA Developer, contributing to automation solutions for enterprise clients.</li>
+            <li>Developing and maintaining automation workflows using <strong>Blue Prism</strong>, with foundational training in Microsoft Power Automate.</li>
+            <li>Collaborating with senior developers and business analysts to translate business requirements into scalable RPA solutions.</li>
+            <li>Building expertise in process design, exception handling, and deployment within enterprise automation environments.</li>
+          </ul>
+        </div>
+        <div class="exp-location">Bengaluru<br>Karnataka, India</div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">
+          Sep 2024 – May 2025
+          <br><span class="badge badge-past">Past</span>
+        </div>
+        <div class="exp-main">
+          <div class="exp-company">Pyramyd AI</div>
+          <div class="exp-role">Generative AI Intern</div>
+          <ul class="exp-bullets">
+            <li>Worked on <strong>Project Alpha Genie</strong> — a GenAI system for extracting and summarizing financial
+              quarterly result sheets from PDFs.</li>
+            <li>Implemented a PDF parsing and extraction pipeline to identify key financial metrics (revenue, net
+              profit, EPS) using Python.</li>
+            <li>Designed a Flask-based UI to enable user-friendly interactions for querying financial data from
+              quarterly reports.</li>
+            <li>Integrated an LLM to allow users to compare financial performance across companies and quarters via
+              natural language queries.</li>
+          </ul>
+        </div>
+        <div class="exp-location">Bengaluru<br>Karnataka, India</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section">
+    <div class="section-label reveal"><span class="section-num">03</span> Projects</div>
+    <div class="proj-list">
+
+      <!-- row 1 -->
+      <div class="proj-row reveal" data-proj="0" onclick="toggleProj(this)">
+        <div class="proj-row-num">01</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Search Engine with LangChain</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">LLMs</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Built a custom search engine using LangChain with integrated tools and agents to retrieve and summarize
+              relevant information.</li>
+            <li>Developed conversational agents to dynamically respond to user queries, improving search precision and
+              user experience.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23" target="_blank" class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="proj-row reveal reveal-delay-1" data-proj="1" onclick="toggleProj(this)">
+        <div class="proj-row-num">02</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Kidney Disease Classification</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">CNN</span><span class="ptag">TensorFlow</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Built a deep learning model using CNNs to classify kidney disease from medical imaging data.</li>
+            <li>Evaluated with accuracy, precision, recall, and AUC-ROC to ensure reliability for medical predictions.
+            </li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23" target="_blank" class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="proj-row reveal reveal-delay-2" data-proj="2" onclick="toggleProj(this)">
+        <div class="proj-row-num">03</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Student Performance Prediction</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">Scikit-Learn</span><span class="ptag">Flask</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Implemented an end-to-end ML pipeline using logistic regression and decision trees to predict student
+              performance.</li>
+            <li>Packaged the project with Flask for deployment and built a user-friendly prediction interface.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Student-Performance-Indicator" target="_blank"
+              class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="proj-row reveal" data-proj="3" onclick="toggleProj(this)">
+        <div class="proj-row-num">04</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Network — Social Media Platform</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">Django</span><span class="ptag">JavaScript</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Built a Twitter-like social platform where users can post, follow others, and view personalized feeds.
+            </li>
+            <li>Implemented like/unlike functionality and pagination using Django REST APIs with dynamic front-end
+              updates.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Network" target="_blank" class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 5 -->
+      <div class="proj-row reveal reveal-delay-1" data-proj="4" onclick="toggleProj(this)">
+        <div class="proj-row-num">05</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">E-Commerce Website</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">Django</span><span class="ptag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Developed a full-featured e-commerce application with product listings, shopping cart, and order
+              management.</li>
+            <li>Implemented user authentication, admin dashboard, and dynamic product filtering using Django.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Ecommerce-website" target="_blank" class="proj-link-btn">View on
+              GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 6 -->
+      <div class="proj-row reveal reveal-delay-2" data-proj="5" onclick="toggleProj(this)">
+        <div class="proj-row-num">06</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Mail — Email Client Frontend</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">JavaScript</span><span class="ptag">REST API</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Designed a single-page email client that makes API calls to send, receive, reply, and archive emails.
+            </li>
+            <li>Implemented inbox, sent, and archived mailboxes with dynamic rendering and read/unread state tracking.
+            </li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Mail" target="_blank" class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 7 -->
+      <div class="proj-row reveal" data-proj="6" onclick="toggleProj(this)">
+        <div class="proj-row-num">07</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Wiki Page — Encyclopedia App</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">Django</span><span class="ptag">Markdown</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Built a Wikipedia-like encyclopedia where users can create, edit, search, and browse entries.</li>
+            <li>Entries stored in Markdown and rendered to HTML, with a random-page discovery feature.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Wiki-page" target="_blank" class="proj-link-btn">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 8 -->
+      <div class="proj-row reveal reveal-delay-1" data-proj="7" onclick="toggleProj(this)">
+        <div class="proj-row-num">08</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Video Brightness Analysis</div>
+          <div class="proj-tags-row">
+            <span class="ptag">Python</span><span class="ptag">OpenCV</span><span class="ptag">Data Analysis</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Analyzed video content frame-by-frame to extract and visualize brightness levels across entire video
+              sequences.</li>
+            <li>Generated brightness trend charts to identify lighting patterns and anomalies in video data.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Video-Brightness-Analysis" target="_blank" class="proj-link-btn">View
+              on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 9 -->
+      <div class="proj-row reveal reveal-delay-2" data-proj="8" onclick="toggleProj(this)">
+        <div class="proj-row-num">09</div>
+        <div class="proj-row-inner">
+          <div class="proj-row-title">Google Search Page Clone</div>
+          <div class="proj-tags-row">
+            <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Python</span><span
+              class="ptag">JavaScript</span>
+          </div>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+      <div class="proj-detail">
+        <div class="proj-detail-inner">
+          <ul class="proj-detail-desc">
+            <li>Recreated Google's search interface with web search, image search, and advanced search pages.</li>
+            <li>Built as a web programming exercise integrating front-end design with Python backend logic.</li>
+          </ul>
+          <div>
+            <a href="https://github.com/AnushaP23/Google-Search-Page" target="_blank" class="proj-link-btn">View on
+              GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section">
+    <div class="section-label reveal"><span class="section-num">04</span> Skills</div>
+    <div class="skills-layout reveal">
+      <div class="skill-col">
+        <div class="skill-col-title">Languages</div>
+        <div class="skill-items">
+          <div class="skill-item">Python</div>
+          <div class="skill-item">C++</div>
+          <div class="skill-item">C</div>
+          <div class="skill-item">HTML / CSS</div>
+          <div class="skill-item">SQL</div>
+          <div class="skill-item">JavaScript</div>
+        </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">ML &amp; AI</div>
+        <div class="skill-items">
+          <div class="skill-item">Machine Learning</div>
+          <div class="skill-item">Deep Learning</div>
+          <div class="skill-item">NLP</div>
+          <div class="skill-item">LLMs &amp; GenAI</div>
+          <div class="skill-item">Time Series</div>
+          <div class="skill-item">Statistics</div>
+        </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Tools &amp; Frameworks</div>
+        <div class="skill-items">
+          <div class="skill-item">LangChain</div>
+          <div class="skill-item">TensorFlow / Keras</div>
+          <div class="skill-item">Scikit-Learn</div>
+          <div class="skill-item">Flask · Streamlit</div>
+          <div class="skill-item">MLflow</div>
+          <div class="skill-item">Git · RPA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="section-label reveal"><span class="section-num">05</span> Contact</div>
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="contact-big">Let's<br>work<br><em>together</em></div>
+        <p class="contact-sub">
+          Always open to interesting conversations, collaboration, or new opportunities.
+          Whether it's a project idea, a role, or just a hello — feel free to reach out.
+        </p>
+      </div>
+      <div class="contact-links reveal reveal-delay-1">
+
+        <a href="mailto:anusha.hullathi@gmail.com" class="contact-link-row">
+          <div>
+            <div class="clr-label">Email</div>
+            <div class="clr-val">anusha.hullathi@gmail.com</div>
+          </div>
+          <button class="copy-btn" id="copy-btn" type="button" onclick="copyEmail(event)">Copy</button>
+        </a>
+
+        <a href="https://www.linkedin.com/in/anushaphullathi" target="_blank" rel="noopener" class="contact-link-row">
+          <div>
+            <div class="clr-label">LinkedIn</div>
+            <div class="clr-val">linkedin.com/in/anushaphullathi</div>
+          </div>
+          <span class="clr-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/AnushaP23" target="_blank" rel="noopener" class="contact-link-row">
+          <div>
+            <div class="clr-label">GitHub</div>
+            <div class="clr-val">github.com/AnushaP23</div>
+          </div>
+          <span class="clr-arrow">↗</span>
+        </a>
+
+        <a href="tel:+919606361223" class="contact-link-row">
+          <div>
+            <div class="clr-label">Phone</div>
+            <div class="clr-val">+91 96063 61223</div>
+          </div>
+          <span class="clr-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-name">Anusha P Hullathi</span>
+    <span>© 2026 · Built with care</span>
+    <a href="https://github.com/AnushaP23" target="_blank" style="color:var(--muted);transition:color .2s"
+      onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">GitHub ↗</a>
+  </footer>
+
+  <script>
+    /* ── Custom cursor ── */
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function animCursor() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animCursor);
+    })();
+    document.querySelectorAll('a, button, .proj-row, .skill-item, .chip').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+    });
+
+    /* ── Scroll: progress + nav + btt ── */
+    const spb = document.getElementById('spb');
+    const nav = document.getElementById('nav');
+    const btt = document.getElementById('btt');
+    window.addEventListener('scroll', () => {
+      const ratio = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      spb.style.width = Math.min(ratio * 100, 100) + '%';
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+      btt.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+
+    /* ── Active nav ── */
+    ['about', 'experience', 'projects', 'skills', 'contact'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          const lnk = document.querySelector(`.nav-links a[data-s="${id}"]`);
+          if (lnk) lnk.classList.add('active');
+        }
+      }, { rootMargin: '-30% 0px -60% 0px' }).observe(el);
+    });
+
+    /* ── Reveal on scroll ── */
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.06 }).observe(el);
+    });
+
+    /* ── Typewriter ── */
+    const roles = ['RPA Developer at IBM', 'Generative AI Engineer', 'Machine Learning Engineer', 'NLP Practitioner'];
+    let ri = 0, ci = 0, del = false;
+    const typedEl = document.getElementById('typed-text');
+    (function tick() {
+      const cur = roles[ri];
+      if (!del) {
+        typedEl.textContent = cur.slice(0, ++ci);
+        if (ci === cur.length) { del = true; setTimeout(tick, 2000); return; }
+      } else {
+        typedEl.textContent = cur.slice(0, --ci);
+        if (ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+      }
+      setTimeout(tick, del ? 38 : 72);
+    })();
+
+    /* ── Project accordion ── */
+    function toggleProj(row) {
+      const detail = row.nextElementSibling;
+      const isOpen = detail.classList.contains('open');
+      // close all
+      document.querySelectorAll('.proj-detail.open').forEach(d => d.classList.remove('open'));
+      if (!isOpen) detail.classList.add('open');
+    }
+
+    /* ── Hero: name char split ── */
+    (function () {
+      const name = document.querySelector('.hero-name');
+      if (!name) return;
+      name.style.opacity = '1';
+      name.style.animation = 'none';
+      name.style.transform = 'none';
+      let idx = 0;
+      function processNode(node) {
+        if (node.nodeType === 3) {
+          const chars = [...node.textContent];
+          const frag = document.createDocumentFragment();
+          chars.forEach(ch => {
+            if (!ch.trim()) { frag.appendChild(document.createTextNode(ch)); return; }
+            const s = document.createElement('span');
+            s.className = 'hero-char';
+            s.style.animationDelay = (0.38 + idx++ * 0.042) + 's';
+            s.textContent = ch;
+            frag.appendChild(s);
+          });
+          node.replaceWith(frag);
+        } else if (node.nodeType === 1 && node.tagName !== 'BR') {
+          [...node.childNodes].forEach(processNode);
+        }
+      }
+      [...name.childNodes].forEach(processNode);
+    })();
+
+    /* ── Hero: stat counters ── */
+    (function () {
+      const data = [{ t: 2, s: '' }, { t: 9, s: '+' }, { t: 7, s: '' }];
+      document.querySelectorAll('.hero-stat-num').forEach((el, i) => {
+        el.textContent = '0';
+        setTimeout(() => {
+          const start = performance.now();
+          (function step(now) {
+            const p = Math.min((now - start) / 1100, 1);
+            el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * data[i].t) + data[i].s;
+            if (p < 1) requestAnimationFrame(step);
+          })(performance.now());
+        }, 950 + i * 140);
+      });
+    })();
+
+    /* ── Hero: mouse-follow gradient ── */
+    (function () {
+      const hero = document.getElementById('hero');
+      const bg = hero.querySelector('.hero-bg');
+      let ticking = false;
+      hero.addEventListener('mousemove', e => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const r = hero.getBoundingClientRect();
+          const x = ((e.clientX - r.left) / r.width * 100).toFixed(1);
+          const y = ((e.clientY - r.top) / r.height * 100).toFixed(1);
+          bg.style.background = `radial-gradient(ellipse 55% 50% at ${x}% ${y}%, rgba(200,169,110,0.1) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%, rgba(100,80,40,0.06) 0%, transparent 70%)`;
+          ticking = false;
+        });
+      });
+      hero.addEventListener('mouseleave', () => { bg.style.background = ''; });
+    })();
+
+    /* ── Copy email ── */
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function copyEmail(e) {
+      e.preventDefault(); e.stopPropagation();
+      const btn = document.getElementById('copy-btn');
+      navigator.clipboard.writeText('anusha.hullathi@gmail.com').then(() => {
+        btn.textContent = '✓ Done'; btn.classList.add('copied');
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('show');
+          btn.textContent = 'Copy'; btn.classList.remove('copied');
+        }, 2400);
+      });
+    }
+  </script>
+</body>
+
+</html>
